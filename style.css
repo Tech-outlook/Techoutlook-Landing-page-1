@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+  outline: none;
+  cursor: default;
+}
+
+.bg-container {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+nav {
+  background: transparent;
+  width: 100%;
+}
+
+label.logo {
+  color: goldenrod;
+  font-size: 35px;
+  line-height: 60px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+a:hover {
+  background: green;
+  color: white;
+  transition: 0.2s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 60px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    background: lightgoldenrodyellow;
+    top: 61px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s ease;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: green;
+    color: white;
+    transition: 0.2s;
+  }
+  #check:checked ~ ul {
+    right: -20px;
+  }
+
+  nav #check:checked ~ .checkbtn i::before {
+    content: "\f00d";
+  }
+}
+.horizantal-line {
+  width: 100%;
+}
+
+.landing-page {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 20px;
+}
+
+.LP-leftside {
+  padding: 0px 50px;
+}
+
+.LP-leftside h1 {
+  font-family: "Bree serif";
+}
+
+.LP-leftside p {
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.LP-leftside ul li {
+  list-style-type: square;
+  margin: 10px 0px;
+  font-family: "Bree serif";
+}
+
+.LP-leftside div button {
+  margin: 0px 5px;
+}
+.LP-leftside .btn {
+  padding: 10px;
+  border: 0px;
+  background: goldenrod;
+  color: white;
+  font-weight: bolder;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.RE-btn {
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 3px;
+  background: transparent;
+  border: 2px solid gold;
+  cursor: pointer;
+}
+.LP-leftside div button:hover {
+  background: green;
+  border: 0px;
+  color: white;
+  padding: 10px;
+}
+.LP-rightside {
+  display: flex;
+  justify-content: space-around;
+}
+.LP-rightside h1 {
+  font-family: "Bree serif";
+  line-height: 40px;
+  font-size: 15px;
+  display: none;
+}
+.LP-rightside p {
+  display: none;
+}
+
+.landing-page img {
+  height: 220px;
+  width: 200px;
+  margin: 0px 0px;
+  border-radius: 5px;
+}
+
+@media (max-width: 858px) {
+  .landing-page {
+    flex-direction: column;
+  }
+
+  .LP-rightside {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .LP-rightside div h1 {
+    display: initial;
+    background: white;
+    width: 100%;
+  }
+  .LP-rightside div p {
+    display: initial;
+    font-size: 25px;
+    font-family: "Bree serif";
+    width: 100%;
+  }
+  .landing-page img {
+    width: 200px;
+  }
+
+  .LP-leftside {
+    padding: 20px;
+  }
+}
+
+.portfoilo {
+  display: initial;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 25px;
+  margin: 5px 0px;
+  font-family: "Bree serif";
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: lightgoldenrodyellow;
+  width: 100%;
+  margin: 0px;
+}
+.cards div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 290px;
+  width: 400px;
+  margin: 10px 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background: white;
+  background-size: cover;
+}
+.cards div img {
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+}
+.cards div h1 {
+  font-family: "Bree serif";
+  font-size: 20px;
+  padding-left: 10px;
+}
+.cards div p {
+  font-family: "Bree serif";
+  padding-left: 10px;
+}
+.cards div span {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: green;
+  cursor: pointer;
+}
+
+@media (max-width: 858px) {
+  .portfoilo {
+    display: none;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
